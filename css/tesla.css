@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*
+{
+    padding:0;
+    margin:0;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing : border-box;
+}
+
+.accueil
+{
+    text-align: center;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    
+}
+
+
+
+.accueil span 
+{
+    
+    text-transform: uppercase;
+    display: block;
+}
+.texte1
+{
+    color : whitesmoke;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-bottom:60px ;
+    background: black;
+    position: relative;
+    animation : text 3s 1;
+}
+.texte2
+{
+    font-size: 32px;
+    color : red;
+    font-weight: bolder;
+    background: url("https://www.wallpapertip.com/wmimgs/33-337624_hd-wallpaper-tesla-car-background.jpg");
+
+}
+
+@keyframes text {
+    0%
+    {
+        color : black;
+        margin-bottom: -40px;
+    }
+    30%
+    {
+        letter-spacing: 12px;
+        margin-bottom: -40px;
+    }
+    80%
+    {
+        letter-spacing: 6px;
+        margin-bottom: -40px;
+    }
+}
+
+.imagefond
+{
+    background-image: url("https://www.wallpapertip.com/wmimgs/33-337624_hd-wallpaper-tesla-car-background.jpg");
+    width: 100%;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    
+
+}
+nav{
+    
+    height: 80px;
+    width: 100%;
+    
+    
+}
+nav ul {
+    text-align: center;
+    margin-right: 20px;
+    
+
+
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin : 0 5px;
+    
+
+
+}
+nav ul li a {
+    color: red;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+    padding: 7px 13px;
+
+    text-transform: uppercase;
+
+    
+
+
+}
+a.active , a:hover {
+    background: #DCDCDC;
+    font-family: 'Ubuntu', sans-serif;
+    transition: 5s;
+
+
+}
+.checkbouton {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+
+}
+#check {
+    display: none;
+
+}
+li{
+    text-align: center;
+}
+label.logo img{
+    max-height: 100%;
+    max-width: 50%;
+    line-height: 80px;
+    padding: 0 100px;
+    display: block;
+    padding: 0 100px;
+}
+header {
+    background: black;
+}
+
+/* bar de chargement */
+
+.chargeur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lettre {
+    color : white;
+    font-size: 80px;
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: flash 1.2s linear infinite;
+
+}
+
+@keyframes flash {
+
+    0% {
+        color : blue;
+        text-shadow: 0 0 7px white;
+    
+    }
+    90% {
+        color: red;
+        text-shadow : none;
+    }
+    100% {
+        color : blue;
+        text-shadow: 0 0 7px white;
+
+    }
+    
+}
+.lettre:nth-child(1){
+    animation-delay: 0.1s;
+}
+.lettre:nth-child(2){
+    animation-delay: 0.2s;
+}
+.lettre:nth-child(3){
+    animation-delay: 0.3s;
+}
+.lettre:nth-child(4){
+    animation-delay: 0.4s;
+}
+.lettre:nth-child(5){
+    animation-delay: 0.5s;
+}
+.lettre:nth-child(6){
+    animation-delay: 0.6s;
+}
+.lettre:nth-child(7){
+    animation-delay: 0.7s;
+}
+.lettre:nth-child(8){
+    animation-delay: 0.8s;
+}
+.lettre:nth-child(9){
+    animation-delay: 0.9s;
+}
+.lettre:nth-child(9){
+    animation-delay: 1s;
+}
+.fondu-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 679px) {
+    .accueil{width: 95%;}
+}
+
+@media (min-width : 680px) and (max-width : 959px) {
+
+
+}
+p {
+    text-align : center ; position : fixed ;
+    bottom : 0 ; 
+    width : 100% ;
+    display : inline-block ; 
+    vertical-align : top ;
+    font-size : 13px ; 
+}

@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+*
+{
+    padding:0;
+    margin:0;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing : border-box;
+}
+
+.accueil
+{
+    text-align: center;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+
+
+.accueil span 
+{
+    
+    text-transform: uppercase;
+    display: block;
+}
+.texte1
+{
+    color : whitesmoke;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-bottom:60px ;
+    background: black;
+    position: relative;
+    animation : text 3s 1;
+}
+.texte2
+{
+    font-size: 32px;
+    color : red;
+    font-weight: bolder;
+
+}
+
+@keyframes text {
+    0%
+    {
+        color : black;
+        margin-bottom: -40px;
+    }
+    30%
+    {
+        letter-spacing: 12px;
+        margin-bottom: -40px;
+    }
+    80%
+    {
+        letter-spacing: 6px;
+        margin-bottom: -40px;
+    }
+}
+
+body
+{
+    background: url("https://www.numerama.com/wp-content/uploads/2018/08/sx3semi-family1.jpg");
+    background-size: 100%;
+    background-size: cover;
+
+}
+nav{
+    
+    height: 80px;
+    width: 100%;
+    
+    
+}
+nav ul {
+    text-align: center;
+    margin-right: 20px;
+    
+
+
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin : 0 5px;
+    
+
+
+}
+nav ul li a {
+    color: red;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    
+
+
+}
+a.active , a:hover {
+    background: #DCDCDC;
+    font-family: 'Ubuntu', sans-serif;
+    transition: 5s;
+
+
+}
+.checkbouton {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+
+}
+#check {
+    display: none;
+
+}
+li{
+    text-align: center;
+}
+label.logo img{
+    max-height: 50%;
+    max-width: 50%;
+    line-height: 80px;
+    padding: 0 100px;
+    display: block;
+    padding: 0 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+
+section
+{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    width: 100%;
+}
+h2 {
+    font-family:'Poppins',sans-serif ;
+}
+section::before
+{
+   content:'';
+   position: absolute;
+   width: 400px; 
+   height: 400px;
+  
+}
+.container
+{
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    background: rgba(187, 169, 169, 0.8);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Poppins',sans-serif ;
+    backdrop-filter: blur(18px);
+}
+.container::before
+{
+    content: '';
+    position: absolute;
+    top:0;
+    left: -40%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    pointer-events: none;
+    transform: skewX(-15deg);
+}
+.container h2{
+    width: 100%;
+    text-align: center;
+    color : #fff;
+    font-size : 36px;
+    margin-bottom: 20px;
+}
+.container .row100
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.container .row100 .col
+{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+
+}
+.container .row100 .col .inputBox
+{
+    position: relative;
+    width: 100%;
+    height: 35px;
+    color : white;
+
+}
+.container .row100 .col .inputBox input,
+.container .row100 .col .inputBox textarea
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 10px;
+    z-index: 1;
+    color: black
+
+
+}
+.container .row100 .col .inputBox .text
+{
+    position: absolute;
+    left: 0;
+    top:0;
+    line-height: 40px;
+    font-size: 28px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .row100 .col .inputBox input:focus + .text,
+.container .row100 .col .inputBox textarea:focus + .text
+{
+    top:-35px;
+    left: -10px;
+
+}
+.container .row100 .col .inputBox .line
+{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+
+}
+.container .row100 .col .inputBox input:focus ~ .line,
+.container .row100 .col .inputBox input:valid ~ .line
+{
+    height: 100%;
+}
+
+.container .row100 .col .inputBox.textarea
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding:10px;
+}
+.container .row100 .col input[type="submit"]
+{
+    border: none;
+    padding:10px 40px;
+    cursor: pointer;
+    background: white;
+    color:black;
+    font-size: 32px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+@media (max-width: 768px) {
+
+    section::before{
+        content:'';
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(#ffeb3b,#e91e63);
+        border-radius:50%;
+        transform: translate(-200px ,180px);
+    }
+}
+.btn {
+    height: 100px;
+    width: 100px;
+    background: crimson;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
+.icone {
+    width: 50px;
+}
